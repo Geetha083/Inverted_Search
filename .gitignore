@@ -1,0 +1,9 @@
+a.out
+*.o
+gdb_history
+.gdb_history
+empty.txt
+bad.txt
+save.txt
+database.txt
+*:Zone.Identifier
