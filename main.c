@@ -37,9 +37,14 @@ int main(int argc, char *argv[])
 	switch (option)
     { 
     case 1:
-    if(create_database(HT, head) == SUCCESS)
+    if(db_created == 1)
     {
-        db_created = 1;
+        printf("Error : Database is already created\n");
+        break;
+    }
+    if(create_database(HT, head)==SUCCESS)
+    {
+        db_created =1;
     }
     break;
     case 2:
