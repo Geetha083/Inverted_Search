@@ -32,7 +32,13 @@ int main(int argc, char *argv[])
     {
 	printf("\nSelect your choice among following operations:\n1. Create Database\n2. Display Database\n3. Save Database\n4. Search\n5. Update Database\n6. Exit\n\nEnter your choice : ");
 
-	scanf("%d", &option);
+	if(scanf("%d", &option)!=1)
+    {
+        printf("INFO : Please enter a valid option\n");
+        int ch;
+        while((ch = getchar())!='\n' && ch !=EOF);
+        continue;
+    }
 
 	switch (option)
     { 
